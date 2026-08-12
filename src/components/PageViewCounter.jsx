@@ -2,22 +2,23 @@ import React, { useState, useEffect } from 'react';
 import { Eye, TrendingUp } from 'lucide-react';
 
 export function PageViewCounter() {
-  const [views, setViews] = useState(14850);
+  const [views, setViews] = useState(1);
 
   useEffect(() => {
-    // Retrieve stored views or initialize base view count
-    const storageKey = 'juve3d_page_views';
-    const initialBaseViews = 14850;
+    // Retrieve stored views starting from 1 for exact real visits count
+    const storageKey = 'juve3d_real_exact_views';
+    const initialBaseViews = 1;
     
     let currentViews = parseInt(localStorage.getItem(storageKey), 10);
     if (isNaN(currentViews) || currentViews < initialBaseViews) {
       currentViews = initialBaseViews;
+    } else {
+      currentViews = currentViews + 1;
     }
     
-    // Increment view count on session visit
-    const updatedViews = currentViews + 1;
-    localStorage.setItem(storageKey, updatedViews.toString());
-    setViews(updatedViews);
+    localStorage.setItem(storageKey, currentViews.toString());
+    setViews(currentViews);
+
 
     // Track GA4 page_view event if gtag script is loaded
     if (typeof window !== 'undefined' && typeof window.gtag === 'function') {
