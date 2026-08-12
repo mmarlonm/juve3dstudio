@@ -5,6 +5,8 @@ import gsap from 'gsap';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
 import { ArchitecturalScene } from './3d/ArchitecturalScene';
 import { Layers, Cpu, Box, Sparkles, ArrowDown, CheckCircle2, ChevronRight } from 'lucide-react';
+import { getAssetPath } from '../utils/assets';
+
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -202,11 +204,12 @@ export function ProcessSection() {
                   {/* Clean White Background Container matching exact diagrams 2.jpg to 9.jpg */}
                   <div className="aspect-[4/3] rounded-xl overflow-hidden bg-white p-3 flex flex-col items-center justify-center shadow-lg border border-zinc-200">
                     <img 
-                      src={step.diagram} 
+                      src={getAssetPath(step.diagram)} 
                       alt={step.title} 
                       className="max-h-full max-w-full object-contain filter contrast-125"
                     />
                   </div>
+
                   <div className="mt-2 text-center text-[10px] font-mono text-zinc-400 uppercase tracking-wider">
                     ESQUEMA ESTRUCTURAL ARCH-3D • PASO {step.num}
                   </div>

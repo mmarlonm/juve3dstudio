@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import { Phone, Menu, X, ArrowUpRight, Box } from 'lucide-react';
 import { motion, AnimatePresence } from 'framer-motion';
+import { getAssetPath } from '../utils/assets';
 
 export function Navbar({ onOpenQuoteModal }) {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
@@ -21,7 +22,7 @@ export function Navbar({ onOpenQuoteModal }) {
         <a href="#" className="flex items-center gap-3 group">
           <div className="w-10 h-10 rounded-lg overflow-hidden bg-white/10 p-1 border border-zinc-800 flex items-center justify-center group-hover:border-zinc-500 transition-colors">
             <img 
-              src="/assets/images/logo.png" 
+              src={getAssetPath('/assets/images/logo.png')} 
               alt="JUVE 3D STUDIO Logo" 
               className="w-full h-full object-contain filter invert contrast-200 brightness-200"
               onError={(e) => {

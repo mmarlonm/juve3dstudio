@@ -1,6 +1,7 @@
 import React from 'react';
 import { motion } from 'framer-motion';
 import { HelpCircle, ArrowRight, CheckCircle2, Award, Users, Video, MapPin, GraduationCap, Calendar } from 'lucide-react';
+import { getAssetPath } from '../utils/assets';
 
 export function AboutSection({ onOpenQuoteModal }) {
   return (
@@ -51,7 +52,7 @@ export function AboutSection({ onOpenQuoteModal }) {
             <div className="flex items-center gap-4 mb-5">
               <div className="w-16 h-16 rounded-2xl overflow-hidden border-2 border-zinc-700 bg-zinc-800 shrink-0 shadow-xl">
                 <img 
-                  src="/assets/diagrams/1.jpg" 
+                  src={getAssetPath('/assets/diagrams/1.jpg')} 
                   alt="Diego Alejandro Alvarado de León - El Arqui Juve" 
                   className="w-full h-full object-cover object-top"
                 />
@@ -88,10 +89,11 @@ export function AboutSection({ onOpenQuoteModal }) {
           className="lg:col-span-4 glass-panel p-3 rounded-3xl relative overflow-hidden group min-h-[380px] flex flex-col justify-end"
         >
           <img 
-            src="/assets/images/kitchen-render.jpg" 
+            src={getAssetPath('/assets/images/kitchen-render.jpg')} 
             alt="Interior Render Showcase Juve 3D Studio" 
             className="absolute inset-0 w-full h-full object-cover rounded-2xl group-hover:scale-105 transition-transform duration-700"
           />
+
           <div className="absolute inset-0 bg-gradient-to-t from-zinc-950 via-zinc-950/30 to-transparent rounded-2xl" />
 
           <div className="relative z-10 p-5">

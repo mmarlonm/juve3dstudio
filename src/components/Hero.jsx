@@ -1,6 +1,7 @@
 import React from 'react';
 import { motion } from 'framer-motion';
 import { Sparkles, Box, Layers, Compass, ArrowRight } from 'lucide-react';
+import { getAssetPath } from '../utils/assets';
 
 export function Hero({ onOpenQuoteModal, onSelectService }) {
   const quickCards = [
@@ -30,19 +31,19 @@ export function Hero({ onOpenQuoteModal, onSelectService }) {
     },
   ];
 
-
   return (
     <section className="relative min-h-screen pt-28 pb-16 px-4 sm:px-8 flex flex-col justify-between overflow-hidden bg-grid-pattern">
       
       {/* Background Architectural House Render Backdrop */}
       <div className="absolute inset-x-4 top-20 bottom-10 rounded-3xl overflow-hidden border border-zinc-800/80 shadow-2xl z-0">
         <img 
-          src="/assets/images/hero-villa.png" 
+          src={getAssetPath('/assets/images/hero-villa.png')} 
           alt="Modern Architectural Villa JUVE3DStudio" 
           className="w-full h-full object-cover object-center opacity-65 filter brightness-95 contrast-110"
         />
         <div className="absolute inset-0 bg-gradient-to-t from-[#0F0F10] via-[#0F0F10]/60 to-[#0F0F10]/20" />
       </div>
+
 
 
       {/* Main Hero Headline & Subtitle */}

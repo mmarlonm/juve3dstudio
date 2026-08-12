@@ -1,5 +1,6 @@
 import React from 'react';
 import { Phone, Mail, MapPin, Box, Send, Instagram } from 'lucide-react';
+import { getAssetPath } from '../utils/assets';
 
 export function Footer() {
   return (
@@ -11,7 +12,7 @@ export function Footer() {
           <div className="flex items-center gap-3">
             <div className="w-8 h-8 rounded-lg overflow-hidden bg-white/10 p-1 border border-zinc-800 flex items-center justify-center">
               <img 
-                src="/assets/images/logo.png" 
+                src={getAssetPath('/assets/images/logo.png')} 
                 alt="JUVE 3D STUDIO Logo" 
                 className="w-full h-full object-contain filter invert brightness-200"
                 onError={(e) => {
@@ -21,6 +22,7 @@ export function Footer() {
               />
               <Box className="w-5 h-5 text-white hidden" />
             </div>
+
 
             <span className="font-extrabold text-base tracking-wider text-white">
               JUVE<span className="text-zinc-400">3D</span>STUDIO<span className="text-xs text-zinc-500 ml-0.5">®</span>

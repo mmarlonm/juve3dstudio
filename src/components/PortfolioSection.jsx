@@ -1,6 +1,8 @@
 import React, { useState } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { ArrowRight, Maximize2, X, Check, ExternalLink } from 'lucide-react';
+import { getAssetPath } from '../utils/assets';
+
 
 export function PortfolioSection({ onOpenQuoteModal }) {
   const [selectedCategory, setSelectedCategory] = useState('Todos');
@@ -127,7 +129,7 @@ export function PortfolioSection({ onOpenQuoteModal }) {
               {/* Image Container with Hover Zoom */}
               <div className="relative aspect-[4/3] rounded-2xl overflow-hidden mb-4 bg-zinc-900">
                 <img 
-                  src={project.image} 
+                  src={getAssetPath(project.image)} 
                   alt={project.name} 
                   className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700 brightness-90 group-hover:brightness-100"
                 />
@@ -143,6 +145,7 @@ export function PortfolioSection({ onOpenQuoteModal }) {
                   <Maximize2 className="w-4 h-4" />
                 </div>
               </div>
+
 
               {/* Card Meta & Title */}
               <div className="flex items-center justify-between px-2 pb-2">
@@ -196,11 +199,12 @@ export function PortfolioSection({ onOpenQuoteModal }) {
                 {/* Large Render Preview */}
                 <div className="lg:col-span-7 aspect-[4/3] rounded-2xl overflow-hidden bg-zinc-950 border border-zinc-800">
                   <img 
-                    src={activeModalProject.image} 
+                    src={getAssetPath(activeModalProject.image)} 
                     alt={activeModalProject.name} 
                     className="w-full h-full object-cover"
                   />
                 </div>
+
 
                 {/* Project Details */}
                 <div className="lg:col-span-5 flex flex-col justify-between">
