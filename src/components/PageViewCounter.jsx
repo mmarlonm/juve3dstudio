@@ -11,7 +11,7 @@ export function PageViewCounter() {
       if (typeof BroadcastChannel !== 'undefined') {
         channel = new BroadcastChannel('juve3d_ga4_realtime_sync');
         channel.postMessage({ type: 'PING_ACTIVE' });
-        
+
         channel.onmessage = (event) => {
           if (event.data?.type === 'PING_ACTIVE') {
             channel.postMessage({ type: 'PONG_ACTIVE' });
@@ -48,19 +48,15 @@ export function PageViewCounter() {
         <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-emerald-400 opacity-75" />
         <span className="relative inline-flex rounded-full h-2.5 w-2.5 bg-emerald-500" />
       </span>
-      
+
       <Radio className="w-3.5 h-3.5 text-emerald-400 group-hover:text-white transition-colors animate-pulse" />
-      
+
       <span className="font-extrabold text-white tracking-wider">
         {activeUsers}
       </span>
-      
+
       <span className="text-[10px] text-zinc-300 uppercase tracking-widest font-bold">
         {activeUsers === 1 ? 'ACTIVO EN TIEMPO REAL' : 'ACTIVOS EN TIEMPO REAL'}
-      </span>
-
-      <span className="hidden xl:inline text-[9px] text-emerald-400/90 bg-emerald-950/80 px-2 py-0.5 rounded-full border border-emerald-800/60 font-mono">
-        GA4: G-RMCD6TSFSF
       </span>
     </div>
   );
