@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import { Phone, Menu, X, ArrowUpRight, Box } from 'lucide-react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { getAssetPath } from '../utils/assets';
+import { PageViewCounter } from './PageViewCounter';
 
 export function Navbar({ onOpenQuoteModal }) {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
@@ -54,19 +55,13 @@ export function Navbar({ onOpenQuoteModal }) {
           ))}
         </nav>
 
-        {/* Right: Phone & CTA Button */}
-        <div className="hidden lg:flex items-center gap-5">
-          <a 
-            href="tel:88005554747" 
-            className="flex items-center gap-2 text-xs font-medium text-zinc-300 hover:text-white transition-colors"
-          >
-            <Phone className="w-3.5 h-3.5 text-zinc-400" />
-            <span>8 800 555-47-47</span>
-          </a>
+        {/* Right: Page View Counter & CTA Button */}
+        <div className="hidden lg:flex items-center gap-4">
+          <PageViewCounter />
 
           <button
             onClick={onOpenQuoteModal}
-            className="px-5 py-2.5 rounded-full bg-white text-zinc-950 font-bold text-xs tracking-wider uppercase hover:bg-zinc-200 transition-all duration-200 shadow-lg shadow-white/10 hover:shadow-white/20 flex items-center gap-1.5 active:scale-95"
+            className="px-5 py-2.5 rounded-full bg-white text-zinc-950 font-bold text-xs tracking-wider uppercase hover:bg-zinc-200 transition-all duration-200 shadow-lg shadow-white/10 hover:shadow-white/20 flex items-center gap-1.5 active:scale-95 shrink-0"
           >
             <span>SOLICITAR COTIZACIÓN</span>
             <ArrowUpRight className="w-3.5 h-3.5" />
