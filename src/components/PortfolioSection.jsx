@@ -12,62 +12,77 @@ export function PortfolioSection({ onOpenQuoteModal }) {
 
   const projects = [
     {
-      id: 'casa-solail',
-      name: 'CASA SOLAIL',
-      area: '110 m²',
+      id: 'residencia-saltillo',
+      name: 'RESIDENCIA SALTILLO',
+      area: '280 m²',
       category: 'Residencial',
-      image: '/assets/projects/casa-solail.png',
-      desc: 'Vivienda unifamiliar sustentable en madera quemada y cristal con integración de paisaje forestal.',
+      image: '/assets/images/port-1.jpg',
+      desc: 'Proyecto residencial contemporáneo con volumetría de concreto aparente, amplia iluminación natural e integración paisajística en Saltillo.',
       details: {
-        location: 'Valle de Bravo, México',
+        location: 'Saltillo, Coahuila',
         year: '2025',
-        type: 'Modelado 3D + Renders Exteriores',
-        software: 'Revit 3D + Lumion 2024'
+        type: 'Proyecto Arquitectónico + Renderizado 3D',
+        software: 'Revit 3D + D5 Render'
       }
     },
     {
-      id: 'estudio-del-lago',
-      name: 'ESTUDIO DEL LAGO',
-      area: '180 m²',
-      category: 'Comercial',
-      image: '/assets/projects/estudio-del-lago.png',
-      desc: 'Estudio de arquitectura y pabellón sobre cuerpo de agua con acabados en concreto aparente y acero.',
+      id: 'villa-montana',
+      name: 'VILLA MONTAÑA',
+      area: '350 m²',
+      category: 'Residencial',
+      image: '/assets/images/port-2.jpg',
+      desc: 'Diseño residencial de alta gama en ladera con vista panorámica, acabados en piedra y estructura de acero de máxima precisión.',
       details: {
         location: 'Monterrey, NL',
         year: '2025',
-        type: 'Proyecto Arquitectónico Completo',
+        type: 'Modelado 3D BIM + Renders Fotorrealistas',
         software: 'Rhino + V-Ray 6'
       }
     },
     {
-      id: 'torre-azur',
-      name: 'TORRE AZUR',
-      area: '4,200 m²',
-      category: 'Renders',
-      image: '/assets/projects/torre-azur.png',
-      desc: 'Torre corporativa y de usos mixtos con fachada dinámica fotovoltaica y vistas panorámicas.',
+      id: 'pabellon-arqui-juve',
+      name: 'PABELLÓN ARQUI JUVE',
+      area: '420 m²',
+      category: 'Comercial',
+      image: '/assets/images/port-3.jpg',
+      desc: 'Pabellón comercial y estudio creativo con doble altura, celosías de ladrillo y propuesta bioclimática vanguardista.',
       details: {
-        location: 'San Pedro Garza García, NL',
+        location: 'Saltillo, Coahuila',
         year: '2026',
-        type: 'Renders Hiperrealistas + VR 360°',
+        type: 'Diseño Ejecutivo + Supervisión de Obra',
         software: '3ds Max + Unreal Engine 5'
       }
     },
     {
-      id: 'residencia-vista',
-      name: 'RESIDENCIA VISTA',
-      area: '320 m²',
-      category: 'Residencial',
-      image: '/assets/images/hero-villa.png',
-      desc: 'Villa contemporánea de dos niveles integrada en ladera de montaña con alberca en cantiléver.',
+      id: 'residencia-lomas',
+      name: 'RESIDENCIA LOMAS',
+      area: '190 m²',
+      category: 'Renders',
+      image: '/assets/images/port-4.jpg',
+      desc: 'Modelado 3D e interiorismo hiperrealista destacando acabados de madera, iluminación empotrada y terrazas ajardinadas.',
       details: {
-        location: 'Santiago, NL',
+        location: 'San Pedro Garza García, NL',
         year: '2025',
-        type: 'Visualización y Recorrido Virtual',
-        software: 'Blender + D5 Render'
+        type: 'Renderizado 8K + Recorrido Virtual 360°',
+        software: 'Blender + Corona Renderer'
+      }
+    },
+    {
+      id: 'casa-cantilever',
+      name: 'CASA CANTILÉVER',
+      area: '310 m²',
+      category: 'Residencial',
+      image: '/assets/images/port-5.jpg',
+      desc: 'Estructura audaz en voladizo soportada por zapatas aisladas y marcos rígidos con acabados de nivel editorial.',
+      details: {
+        location: 'Saltillo, Coahuila',
+        year: '2026',
+        type: 'Modelado 3D + Estructuración en Obra',
+        software: 'Revit + Lumion 2024'
       }
     }
   ];
+
 
   const filteredProjects = selectedCategory === 'Todos'
     ? projects
